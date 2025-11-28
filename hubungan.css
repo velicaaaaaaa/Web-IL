@@ -1,0 +1,258 @@
+@font-face {
+    font-family: "poppinsbold";
+    src: url("Poppins-Bold.ttf");}
+@font-face {
+    font-family: "poppinsreg";
+    src: url("Poppins-Regular.ttf");}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background: #daf5c9;
+    min-height: 100vh;
+    font-family: "poppinsreg";
+    overflow-x: hidden;
+    position: relative;
+}
+
+.back-video{
+    position:fixed;
+    object-fit: cover;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.headerimg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+}
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+    grid-template-areas: "header header"
+                         "content content"
+                         "content2 content2"
+                         "content3 content3"
+                         "content4 content4"
+                         "footer footer";
+    box-sizing: border-box;
+}
+/* navigation bar */
+.topnav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    overflow: visible;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:  #49c55b;  
+    width: 100%;
+    display: flex;               
+    justify-content: center;
+    flex-wrap: nowrap;   
+    border-bottom: 4px solid #198f5a; 
+    border-top: 4px solid #198f5a;
+}
+
+li:last-child {
+    border-right: none;
+}
+li {
+    float: left;
+    border-right: 4px solid #198f5a;
+    position: relative;
+}
+li a {
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: white;
+    font-family: "poppinsbold";
+}
+
+li a:hover {
+    background-color: #2f9c48;
+}
+
+li.dropdown{
+    display:inline-block;
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #49c55b;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px grey;
+}
+.dropdown-content a{
+    color: rgb(253, 255, 239);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover{
+    background-color: rgb(47, 162, 224);
+    box-shadow: 5px ;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
+/* content */
+h1{
+    color:#198f5a  ;
+    text-align: center;
+    font-family: "poppinsbold";
+}
+
+p.content{
+    color: #212225 ;
+    text-align: center;
+}
+
+
+div.content-wrapper{
+    max-width:800px;
+    width: 100%;
+    padding: 20px 100px;
+    height: auto;
+    margin: 20px auto; 
+    background-color: rgb(235, 246, 253);
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    filter: drop-shadow(8px 8px 13px #6c6969);
+}
+div.content-wrapper1{
+    max-width:800px;
+    width: 100%;
+    padding: 20px 100px;
+    height: auto;
+    margin: 20px auto; 
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    filter: drop-shadow(8px 8px 20px #434343);
+}
+
+img.artikel{
+    width: 700px;
+    height: auto;
+    display: block; 
+    margin: 0 auto 20px auto; 
+    border: #ffffff;
+    filter: drop-shadow(3px 3px 10px #626262);
+    border-radius: 8px;
+}
+
+p.content{
+    color: #212225 ;
+    text-align: left;
+    margin-top: 10px;
+}
+
+h2{
+    color: #506fa4  ;
+    text-align: center;
+    font-family: "poppinsbold";
+}
+
+.containercard{
+    display: flex;
+    justify-content: center;
+}
+div.card{
+    width: 270px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-image{
+    height: 150px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+.car-1{
+    background-image: url(taiwan-indo1.jpg);
+}
+.car-2{
+    background-image: url(regional.jpg);
+}
+.car-3{
+    background-image: url(cop29.jpg);
+}
+.card h2{
+    color: #5f82be  ;
+    font-family: "poppinsbold";
+    padding: 10px;
+}
+.card p{
+    padding: 10px;
+}
+
+.card a{
+    background-color:#75d18b ;
+    border-radius: 20px;
+    color: #0e543f;
+    text-decoration: none;
+    font-family: "poppinsbold";
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+}
+.card a:hover{
+    background-color: #427866;
+    color: #ffffff;
+}
+.card:hover{
+    box-shadow: 0 0 15px#738570d4;
+    background-color: rgb(242, 250, 229)
+}
+
+ /* footer */ 
+.footerimg {
+    width: 100%;
+    height: 180px;
+    border-top: 5px solid #cbf5d5;
+    object-fit: cover;
+    display: block;
+    margin-top:30px; 
+}
